@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.26"
+    "dotenv": "^8.2.0",
+    "vue": "^3.4.26",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.4",
