@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../clinicPrinted"
+		},
+		{
+			"path": "../node_server_apps"
+		}
+	]
+}
