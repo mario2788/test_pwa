@@ -4,6 +4,10 @@ import { Routes, Route, Outlet, Link } from "react-router-dom";
 const About = React.lazy(() => import("./pages/About"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 
+
+console.log( "process.env.PUBLIC_URL ::", process.env.PUBLIC_URL );
+
+
 export default function App() {
   return (
     <div>
@@ -35,10 +39,10 @@ export default function App() {
       </p>
 
       <Routes>
-        <Route  exact path="/pwaReact" element={<Layout />}>
+        <Route  exact path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route
-            path="/pwaReact/about"
+            path="/about"
             element={
               <React.Suspense fallback={<>...</>}>
                 <About />
@@ -46,7 +50,7 @@ export default function App() {
             }
           />
           <Route
-            path="/pwaReact/dashboard/*"
+            path="/dashboard/*"
             element={
               <React.Suspense fallback={<>...</>}>
                 <Dashboard />
@@ -66,13 +70,13 @@ function Layout() {
       <nav>
         <ul>
           <li>
-            <Link to="/pwaReact">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/pwaReact/about">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/pwaReact/dashboard/messages">Messages (Dashboard)</Link>
+            <Link to="/dashboard/messages">Messages (Dashboard)</Link>
           </li>
         </ul>
       </nav>
